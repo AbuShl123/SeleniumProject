@@ -1,0 +1,53 @@
+
+
+--------------------------------------------------BASIC QUESTIONS-------------------------------------------------------
+
+
+</> When do we have a NoSuchElementException?
+        - Wrong locator
+        - Synchronization: when driver and browser are not on same page, driver will try to find a web element that
+          is not loaded yet. If it happens it will throw NoSuchElementException
+
+</> .click():
+        1) What does it do?
+            - It clicks to given WebElement
+        2) Does it accept any arguments?
+            - NO.
+        3) Does it work just by itself? (driver.click()0
+            - driver.findElement(By.***).click();
+
+        4) Difference between click and submit method?
+            -click() -> Perform only click operation as like mouse click
+            -submit() -> Perform Enter operation as like keyboard Enter event
+
+</> .sendKeys()
+        1) What does it do?
+            - It will pass the provided String into given element
+        2) Does it accept any argument?
+            - Yes accepts a String argument
+            - We can pass Keys commands into sendKeys() method as well
+        3) Keys.ENTER:
+            - This piece of code will imitate use passing ENTER from keyboard
+
+</> .getText()
+        1) What does it do?
+            - It will get the content from in between opening and closing tags
+        2) What is return type?
+            - String
+        3) does it accept any argument?
+            - No
+
+        syntax: driver.getText() <- we cannot do that
+                driver.findElement(By.***).getText() <- now this is correct
+
+</> .getAttribute("Attribute name")
+        1) What does it do ?
+            - find the matching attribute and returns its value
+        2) What is a return type?
+            - String
+        3) Does it accept any argument?
+            - It accepts String arg
+
+
+
+

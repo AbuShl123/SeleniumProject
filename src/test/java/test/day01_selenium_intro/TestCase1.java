@@ -1,4 +1,4 @@
-package day01_selenium_intro;
+package test.day01_selenium_intro;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

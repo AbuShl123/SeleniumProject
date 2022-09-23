@@ -1,6 +1,6 @@
-package day02_locators_getText_getAttribute;
+package test.day02_locators_getText_getAttribute;
 
-import MyOwnTesting.Test;
+import test.MyOwnTesting.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

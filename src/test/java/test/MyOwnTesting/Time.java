@@ -1,4 +1,4 @@
-package MyOwnTesting;
+package test.MyOwnTesting;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package MyOwnTesting;
+package test.MyOwnTesting;
 
 import static org.junit.Assert.assertEquals;
 
