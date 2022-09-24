@@ -49,5 +49,39 @@
             - It accepts String arg
 
 
+--------------------------------------------------------XPATH-----------------------------------------------------------
 
+- it is one of 8 locators
+- it allows us to create custom locators using provided any attribute and their values
+- we can also use the text of the provided web element to create locator
 
+Xpath has 2 different types:
+
+***P.I.O: What is different between absolute and relative xpath
+
+#1. ABSOLUTE XPATH:
+    - it starts with single clash /
+    - it starts looking html from root/parent to web element
+    - it starts from html tag, and it goes down 1 by 1 until reach to the specific web element that we are looking for
+    - this is not good way of locating element
+    - it will break with any minimal change in html
+
+Syntax: /html/body/div[3]/div/div/tbody/div/button[2]
+
+#2. RELATIVE XPATH:
+    - it starts with double slash //
+    - "//" means you can start from anywhere in html code
+    - Since we are allowed to start from anywhere in the HTML, relative xpath is very dependable
+    - We will see relative xpath, not absolute
+
+Syntax: //tagName[@attribute='value']
+        ex: //*[@id="page-footer"]/div/div
+
+    - How do we go from parent to child using relative xpath?
+        - using '/' we can go from parent to direct child
+        - using '//' we can go from parent to any child (grand-child, grand-grand-child...)
+
+commonly used xpath syntax :
+    1) //tagName[@attribute='']
+    2) //tagName[contains(@attribute, value)]
+    3) //tagName[text()='text of the element'] || //tagName[.='text of element']
