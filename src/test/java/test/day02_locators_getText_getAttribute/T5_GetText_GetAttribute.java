@@ -1,11 +1,11 @@
 package test.day02_locators_getText_getAttribute;
 
-import test.MyOwnTesting.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.WebDriverFactory;
 
 public class T5_GetText_GetAttribute {
     public static void main(String[] args) {
@@ -17,12 +17,12 @@ public class T5_GetText_GetAttribute {
         WebElement element = webDriver.findElement(By.tagName("h2"));
         System.out.println(element.getText());
         String expected = "Registration form";
-        System.out.println(Test.assertEquals(expected, element.getText()));
+        WebDriverFactory.test(expected, element.getText());
 
         // verify the placeholder attribute is as expected
         element = webDriver.findElement(By.name("firstname"));
         expected = "first name";
-        System.out.println(Test.assertEquals(expected, element.getAttribute("placeholder")));
+        WebDriverFactory.test(expected, element.getAttribute("placeholder"));
 
         element.sendKeys("Abubakr");
     }

@@ -1,22 +1,24 @@
-package test.MyOwnTesting;
+package test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import utilities.WebDriverFactory;
 
 public class Time {
     public static void main(String[] args) {
-        WebDriverManager.chromedriver().setup();
+        WebDriver webDriver = WebDriverFactory.getDriver("chrome");
 
-        WebDriver driver = new ChromeDriver();
+        webDriver.get("https://jut.su");
+        WebElement animeBtn = webDriver.findElement(By.cssSelector("div.widget > ul > li > a"));
+        animeBtn.click();
 
-        driver.manage().window().maximize();
+        WebElement attackOnTitan = webDriver.findElement(By.xpath("//div[.='Атака титанов']"));
 
-        driver.get("https://animestars.org/");
+        webDriver.navigate().back();
 
-        WebElement m = driver.findElement(By.cssSelector("body > div.wrapper > div > header > a > div.logo__title"));
-        System.out.println("m.getText() = " + m.getText());
+        attackOnTitan.click();
+
+        webDriver.quit();
     }
 }
