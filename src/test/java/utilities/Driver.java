@@ -53,4 +53,9 @@ public class Driver {
 
         return webDriver;
     }
+
+    public static void closeDriver(){
+        if (webDriver != null)
+            webDriver.quit(); // this will kill the session but driver will not be null
+    }
 }
