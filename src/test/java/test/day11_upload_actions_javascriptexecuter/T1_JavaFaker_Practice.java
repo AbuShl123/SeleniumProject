@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import static org.testng.Assert.*;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
@@ -41,10 +42,9 @@ public class T1_JavaFaker_Practice {
 
        List<WebElement> genders = Driver.getDriver().findElements(By.cssSelector("input[type='radio']"));
 
-//       for (int i = 1; i <= 3; i++) {
-//           genders.get(faker.number().numberBetween(1,3)).click();
-//       }
-        genders.get(new Random().nextInt(3)).click();
+        for (int i = 1; i <= 3; i++) {
+            genders.get(faker.number().numberBetween(1,3)).click();
+        }
 
         WebElement brYear = Driver.getDriver().findElement(By.name("birthday"));
         brYear.sendKeys(faker.numerify("03/06/2005"));
@@ -63,6 +63,6 @@ public class T1_JavaFaker_Practice {
         WebElement signUP = Driver.getDriver().findElement(By.id("wooden_spoon"));
         if (signUP.isEnabled()) signUP.click();
 
-
+        assertEquals(Driver.getDriver().getCurrentUrl(), "https://practice.cydeo.com/registration_confirmation");
     }
 }
