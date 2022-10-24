@@ -1,4 +1,4 @@
-package test.tasks;
+package test.day06_dropdownPractices;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

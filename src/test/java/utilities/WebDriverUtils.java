@@ -1,6 +1,9 @@
 package utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class WebDriverUtils {
@@ -15,5 +18,11 @@ public class WebDriverUtils {
 
     public static void verifyTitle(WebDriver webDriver, String expectedTitle) {
         Assert.assertEquals(webDriver.getTitle(), expectedTitle);
+    }
+
+
+    public static void waitForInvisibilityOf(WebElement element) {
+        new WebDriverWait(Driver.getDriver(), 5)
+                .until(ExpectedConditions.invisibilityOf(element));
     }
 }

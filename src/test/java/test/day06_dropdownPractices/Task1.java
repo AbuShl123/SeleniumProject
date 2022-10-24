@@ -1,4 +1,4 @@
-package test.tasks;
+package test.day06_dropdownPractices;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
