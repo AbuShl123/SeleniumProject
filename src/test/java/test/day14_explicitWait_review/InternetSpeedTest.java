@@ -11,7 +11,7 @@ public class InternetSpeedTest {
     public void internet_test(){
         Driver.getDriver().navigate().to("https://www.speedtest.net");
 
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 25);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 40);
 
         InternetSpeedPage page = new InternetSpeedPage();
 
@@ -22,7 +22,7 @@ public class InternetSpeedTest {
         wait.until(ExpectedConditions.visibilityOf(page.gaugeSpeedNeedle));
         wait.until(ExpectedConditions.invisibilityOf(page.gaugeSpeedNeedle));
 
-        System.out.println(page.downloadData);
-        System.out.println(page.uploadData);
+        System.out.println(page.downloadData.getText());
+        System.out.println(page.uploadData.getText());
     }
 }

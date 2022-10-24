@@ -19,9 +19,9 @@ public class InternetSpeedPage {
     @FindBy (className = "gauge-speed-needle")
     public WebElement gaugeSpeedNeedle;
 
-    @FindBy (className = "data-download-status-value")
+    @FindBy (className = "result-item-download")
     public WebElement downloadData;
 
-    @FindBy (className = "data-upload-status-value")
+    @FindBy (className = "result-item-upload")
     public WebElement uploadData;
 }
