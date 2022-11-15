@@ -22,11 +22,11 @@ public class T1_Circle_Drag_And_Drop {
         Actions actions = new Actions(Driver.getDriver());
 
         //actions.clickAndHold(circle).moveToElement(areaToDrop).release().perform();
-        while (true) {
-            actions.dragAndDrop(circle, areaToDrop).perform();
-            String expected = "You did great!";
-        }
-        //ssertEquals(areaToDrop.getText(), expected, areaToDrop.getText());
+
+        actions.dragAndDrop(circle, areaToDrop).perform();
+        String expected = "You did great!";
+
+        assertEquals(areaToDrop.getText(), expected, areaToDrop.getText());
     }
 
 }
