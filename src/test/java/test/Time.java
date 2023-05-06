@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.TestPage;
+import utilities.Driver;
 import utilities.WebDriverFactory;
 
 import java.util.Arrays;
@@ -18,7 +20,10 @@ public class Time {
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(recur(156));
+    public static void main(String[] args) throws InterruptedException {
+        TestPage page = new TestPage(Driver.getDriver());
+        Driver.getDriver().navigate().to("https://google.com");
+        page.search("anime");
+        Thread.sleep(5000);
     }
 }
